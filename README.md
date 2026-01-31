@@ -1,5 +1,7 @@
 # CuadrilIA - Sitio Web
 
+![Tests](https://github.com/clovellyapps/cuadril-ia/actions/workflows/test.yml/badge.svg)
+
 Sitio web de marketing para CuadrilIA, empresa de formación y consultoría en Inteligencia Artificial.
 
 ## Tecnologías
