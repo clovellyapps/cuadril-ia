@@ -11,6 +11,7 @@
     "test:report": "playwright show-report"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.11.0",
     "@playwright/test": "^1.40.0"
   },
   "keywords": [
