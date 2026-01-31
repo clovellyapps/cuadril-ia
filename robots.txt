@@ -7,5 +7,5 @@ Allow: /
 # Sitemap
 Sitemap: https://cuadrilia.es/sitemap.xml
 
-# LLM.txt para AI crawlers
-# https://cuadrilia.es/llm.txt
+# LLMs.txt para AI crawlers (https://llmstxt.org)
+# https://cuadrilia.es/llms.txt
