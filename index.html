@@ -97,6 +97,24 @@
             outline: 2px solid white;
             outline-offset: 2px;
         }
+        
+        /* Active nav link indicator */
+        nav a.nav-active {
+            color: #a78bfa !important;
+        }
+        nav a.nav-active::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right, #7c3aed, #2563eb);
+            border-radius: 1px;
+        }
+        .nav-link {
+            position: relative;
+        }
     </style>
 </head>
 <body class="font-sans antialiased">
@@ -126,9 +144,9 @@
                 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#servicios" class="text-gray-300 hover:text-white transition-colors">Servicios</a>
-                    <a href="#nosotros" class="text-gray-300 hover:text-white transition-colors">Nosotros</a>
-                    <a href="#testimonios" class="text-gray-300 hover:text-white transition-colors">Testimonios</a>
+                    <a href="#servicios" class="nav-link text-gray-300 hover:text-white transition-colors">Servicios</a>
+                    <a href="#nosotros" class="nav-link text-gray-300 hover:text-white transition-colors">Nosotros</a>
+                    <a href="#testimonios" class="nav-link text-gray-300 hover:text-white transition-colors">Testimonios</a>
                     <a href="#contacto" class="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg hover:opacity-90 transition-opacity">Contactar</a>
                 </div>
                 
@@ -144,9 +162,9 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden glass border-t border-gray-700">
             <div class="px-4 py-4 space-y-3">
-                <a href="#servicios" class="block text-gray-300 hover:text-white transition-colors">Servicios</a>
-                <a href="#nosotros" class="block text-gray-300 hover:text-white transition-colors">Nosotros</a>
-                <a href="#testimonios" class="block text-gray-300 hover:text-white transition-colors">Testimonios</a>
+                <a href="#servicios" class="nav-link block text-gray-300 hover:text-white transition-colors">Servicios</a>
+                <a href="#nosotros" class="nav-link block text-gray-300 hover:text-white transition-colors">Nosotros</a>
+                <a href="#testimonios" class="nav-link block text-gray-300 hover:text-white transition-colors">Testimonios</a>
                 <a href="#contacto" class="block bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg text-center">Contactar</a>
             </div>
         </div>
@@ -563,6 +581,31 @@
         }, observerOptions);
 
         fadeElements.forEach(el => observer.observe(el));
+
+        // Active section indicator in navbar
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        const sectionObserverOptions = {
+            rootMargin: '-20% 0px -80% 0px',
+            threshold: 0
+        };
+
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    navLinks.forEach(link => {
+                        link.classList.remove('nav-active');
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('nav-active');
+                        }
+                    });
+                }
+            });
+        }, sectionObserverOptions);
+
+        sections.forEach(section => sectionObserver.observe(section));
     </script>
 
     <!-- JSON-LD Structured Data -->
