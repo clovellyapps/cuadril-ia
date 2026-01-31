@@ -76,9 +76,35 @@
         
         /* Glass effect */
         .glass { background: rgba(22, 27, 34, 0.8); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+        
+        /* Skip to content link */
+        .skip-link {
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #7c3aed 0%, #2563eb 100%);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 0 0 8px 8px;
+            z-index: 9999;
+            transition: top 0.3s ease;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .skip-link:focus {
+            top: 0;
+            outline: 2px solid white;
+            outline-offset: 2px;
+        }
     </style>
 </head>
 <body class="font-sans antialiased">
+    <!-- Skip to content link for keyboard/screen reader users -->
+    <a href="#main-content" class="skip-link">
+        Saltar al contenido principal
+    </a>
+    
     <!-- Navbar -->
     <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -127,6 +153,7 @@
     </nav>
 
     <!-- Hero Section -->
+    <main id="main-content" tabindex="-1">
     <section class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
         <!-- Background gradient -->
         <div class="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-blue-900/20"></div>
@@ -149,7 +176,7 @@
                     Descubre cómo
                 </a>
             </div>
-            <p class="mt-12 text-gray-400 text-sm">
+            <p class="mt-12 text-gray-300 text-sm">
                 Porque la mejor forma de aprender es en buena compañía
             </p>
         </div>
@@ -157,7 +184,7 @@
 
     <!-- Logos Marquee -->
     <section class="py-16 border-y border-gray-800 overflow-hidden">
-        <p class="text-center text-gray-400 mb-10 text-sm uppercase tracking-widest">Trabajamos con las tecnologías que están cambiando el mundo</p>
+        <p class="text-center text-gray-300 mb-10 text-sm uppercase tracking-widest">Trabajamos con las tecnologías que están cambiando el mundo</p>
         <div class="relative">
             <div class="flex animate-marquee whitespace-nowrap">
                 <!-- First set of logos -->
@@ -321,7 +348,7 @@
                         <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
                     </div>
                     <h3 class="text-lg font-bold mb-2">Formación a tu medida</h3>
-                    <p class="text-gray-400 text-sm">Adaptamos el contenido a tu nivel, desde principiantes hasta equipos técnicos avanzados.</p>
+                    <p class="text-gray-300 text-sm">Adaptamos el contenido a tu nivel, desde principiantes hasta equipos técnicos avanzados.</p>
                 </div>
 
                 <!-- Beneficio 2 -->
@@ -330,7 +357,7 @@
                         <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                     </div>
                     <h3 class="text-lg font-bold mb-2">Resultados desde el día uno</h3>
-                    <p class="text-gray-400 text-sm">Nada de teoría interminable. Aplicarás lo aprendido en tu trabajo real inmediatamente.</p>
+                    <p class="text-gray-300 text-sm">Nada de teoría interminable. Aplicarás lo aprendido en tu trabajo real inmediatamente.</p>
                 </div>
 
                 <!-- Beneficio 3 -->
@@ -339,7 +366,7 @@
                         <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/></svg>
                     </div>
                     <h3 class="text-lg font-bold mb-2">Soporte continuo</h3>
-                    <p class="text-gray-400 text-sm">La formación termina, pero el acompañamiento no. Estamos ahí cuando surgen dudas.</p>
+                    <p class="text-gray-300 text-sm">La formación termina, pero el acompañamiento no. Estamos ahí cuando surgen dudas.</p>
                 </div>
 
                 <!-- Beneficio 4 -->
@@ -348,7 +375,7 @@
                         <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
                     </div>
                     <h3 class="text-lg font-bold mb-2">Experiencia demostrada</h3>
-                    <p class="text-gray-400 text-sm">Equipos de empresas reales ya trabajan mejor gracias a lo que aprendieron con nosotros.</p>
+                    <p class="text-gray-300 text-sm">Equipos de empresas reales ya trabajan mejor gracias a lo que aprendieron con nosotros.</p>
                 </div>
             </div>
         </div>
@@ -369,7 +396,7 @@
                         <div class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center text-white font-bold text-lg">MG</div>
                         <div class="ml-4">
                             <p class="font-semibold">María García</p>
-                            <p class="text-gray-400 text-sm">Directora de Operaciones</p>
+                            <p class="text-gray-300 text-sm">Directora de Operaciones</p>
                         </div>
                     </div>
                     <p class="text-gray-300 italic">"Pensábamos que la IA era solo para programadores. CuadrilIA nos demostró que cualquiera puede aprovecharla. Ahora todo el equipo la usa a diario."</p>
@@ -381,7 +408,7 @@
                         <div class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center text-white font-bold text-lg">CR</div>
                         <div class="ml-4">
                             <p class="font-semibold">Carlos Rodríguez</p>
-                            <p class="text-gray-400 text-sm">CTO, Startup Tecnológica</p>
+                            <p class="text-gray-300 text-sm">CTO, Startup Tecnológica</p>
                         </div>
                     </div>
                     <p class="text-gray-300 italic">"El taller in-situ fue un antes y un después. Mi equipo ahora resuelve en minutos lo que antes llevaba horas. La inversión se pagó sola en semanas."</p>
@@ -393,7 +420,7 @@
                         <div class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center text-white font-bold text-lg">LM</div>
                         <div class="ml-4">
                             <p class="font-semibold">Laura Martínez</p>
-                            <p class="text-gray-400 text-sm">Responsable de Marketing</p>
+                            <p class="text-gray-300 text-sm">Responsable de Marketing</p>
                         </div>
                     </div>
                     <p class="text-gray-300 italic">"Lo mejor fue que no nos hablaron en 'tecniqués'. Por fin entendí cómo usar ChatGPT de verdad. Ahora genero contenido en la mitad de tiempo."</p>
@@ -448,6 +475,7 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="py-12 px-4 border-t border-gray-800">
@@ -477,13 +505,13 @@
                 </nav>
                 
                 <!-- Copyright -->
-                <p class="text-gray-400 text-sm">
+                <p class="text-gray-300 text-sm">
                     © 2026 CuadrilIA. Pamplona, Navarra.
                 </p>
             </div>
             
             <div class="mt-8 pt-8 border-t border-gray-800 text-center">
-                <p class="text-gray-400 text-sm">Aprende IA en buena compañía.</p>
+                <p class="text-gray-300 text-sm">Aprende IA en buena compañía.</p>
             </div>
         </div>
     </footer>
