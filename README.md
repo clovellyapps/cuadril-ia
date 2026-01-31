@@ -118,6 +118,12 @@ echo "cuadrilia.es" > CNAME
 npm install
 ```
 
+### Instalar navegadores para Playwright
+
+```bash
+npx playwright install
+```
+
 ### Ejecutar tests de responsive
 
 ```bash
@@ -130,6 +136,24 @@ npm run test:ui
 # Ejecutar un test específico
 npx playwright test tests/responsive.spec.js
 ```
+
+### Ejecutar tests de accesibilidad
+
+```bash
+# Ejecutar tests de accesibilidad con axe-core
+npx playwright test tests/accessibility.spec.js
+
+# Ejecutar con output detallado
+npx playwright test tests/accessibility.spec.js --reporter=list
+```
+
+Los tests de accesibilidad validan:
+- Conformidad WCAG 2.0 Level A
+- Conformidad WCAG 2.0 Level AA
+- Conformidad WCAG 2.1 Level AA
+- Contraste de colores
+- Atributos ARIA
+- Elementos focuseables
 
 ### Ver reporte de tests
 

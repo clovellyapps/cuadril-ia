@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+
+# Test outputs
+test-results/
+playwright-report/
+.playwright/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
