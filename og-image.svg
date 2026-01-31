@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="50%" style="stop-color:#161b22"/>
+      <stop offset="100%" style="stop-color:#0d1117"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed"/>
+      <stop offset="100%" style="stop-color:#2563eb"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  
+  <!-- Decorative circles -->
+  <circle cx="200" cy="150" r="200" fill="#7c3aed" opacity="0.1"/>
+  <circle cx="1000" cy="480" r="250" fill="#2563eb" opacity="0.1"/>
+  
+  <!-- Logo -->
+  <g transform="translate(500, 180)">
+    <circle cx="50" cy="50" r="16" fill="#7c3aed"/>
+    <circle cx="150" cy="50" r="16" fill="#7c3aed"/>
+    <circle cx="50" cy="150" r="16" fill="#2563eb"/>
+    <circle cx="150" cy="150" r="16" fill="#2563eb"/>
+    <line x1="50" y1="50" x2="150" y2="50" stroke="#7c3aed" stroke-width="6"/>
+    <line x1="50" y1="150" x2="150" y2="150" stroke="#2563eb" stroke-width="6"/>
+    <line x1="50" y1="50" x2="50" y2="150" stroke="#5b4cdb" stroke-width="6"/>
+    <line x1="150" y1="50" x2="150" y2="150" stroke="#5b4cdb" stroke-width="6"/>
+  </g>
+  
+  <!-- Text: CuadrilIA -->
+  <text x="600" y="420" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="bold" fill="#f0f6fc" text-anchor="middle">
+    Cuadril<tspan fill="url(#accent)">IA</tspan>
+  </text>
+  
+  <!-- Tagline -->
+  <text x="600" y="480" font-family="system-ui, -apple-system, sans-serif" font-size="28" fill="#8b949e" text-anchor="middle">
+    Tu cuadrilla para dominar la Inteligencia Artificial
+  </text>
+  
+  <!-- Bottom line -->
+  <text x="600" y="560" font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="#6b7280" text-anchor="middle">
+    Formación · Consultoría · Integración
+  </text>
+</svg>
