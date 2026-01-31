@@ -423,19 +423,25 @@
                 <p class="text-gray-400 text-lg">Rellena el formulario y te responderemos en menos de 24 horas</p>
             </div>
             
-            <div class="fade-in bg-gray-800/30 border border-gray-700 rounded-2xl p-8 md:p-12">
-                <!-- Placeholder para Google Forms -->
-                <div class="text-center py-12 border-2 border-dashed border-gray-600 rounded-xl">
-                    <svg class="w-16 h-16 mx-auto text-gray-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-                    <p class="text-gray-400 mb-4">Aquí irá el formulario de Google Forms</p>
-                    <p class="text-gray-500 text-sm">Reemplaza este bloque con el iframe de tu Google Form:</p>
-                    <code class="block mt-2 text-xs text-purple-400 bg-gray-900 p-3 rounded-lg max-w-md mx-auto overflow-x-auto">
-                        &lt;iframe src="TU_URL_DE_GOOGLE_FORMS" ...&gt;&lt;/iframe&gt;
-                    </code>
+            <div class="fade-in bg-gray-800/30 border border-gray-700 rounded-2xl p-4 md:p-8 overflow-hidden">
+                <!-- Google Form -->
+                <div class="w-full flex justify-center">
+                    <iframe 
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSe8HCTnsktn5OsdSfcTUmOcx_uvuUd0grgJkThGwsWuVmYr3Q/viewform?embedded=true" 
+                        width="100%" 
+                        height="1650" 
+                        frameborder="0" 
+                        marginheight="0" 
+                        marginwidth="0"
+                        title="Formulario de contacto de CuadrilIA"
+                        class="max-w-2xl rounded-lg"
+                        loading="lazy">
+                        Cargando formulario…
+                    </iframe>
                 </div>
                 
                 <!-- Info de contacto alternativa -->
-                <div class="mt-8 pt-8 border-t border-gray-700 text-center">
+                <div class="mt-6 pt-6 border-t border-gray-700 text-center">
                     <p class="text-gray-400 mb-4">¿Prefieres contactarnos directamente?</p>
                     <a href="mailto:hola@cuadrilia.es" class="text-purple-400 hover:text-purple-300 transition-colors font-semibold">hola@cuadrilia.es</a>
                 </div>

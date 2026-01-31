@@ -23,6 +23,7 @@ test.describe('Accesibilidad WCAG 2.1 AA', () => {
   test('página principal sin violaciones críticas', async ({ page }) => {
     const accessibilityScanResults = await new AxeBuilder({ page })
       .withTags(['wcag2a', 'wcag2aa', 'wcag21aa'])
+      .exclude('iframe') // Excluir iframes externos (Google Forms) que no controlamos
       .analyze();
 
     // Mostrar violaciones para debugging si las hay
@@ -81,6 +82,7 @@ test.describe('Accesibilidad WCAG 2.1 AA', () => {
   test('sección contacto accesible', async ({ page }) => {
     const accessibilityScanResults = await new AxeBuilder({ page })
       .include('#contacto')
+      .exclude('iframe') // Excluir Google Forms iframe
       .withTags(['wcag2a', 'wcag2aa', 'wcag21aa'])
       .analyze();
 
@@ -99,6 +101,7 @@ test.describe('Accesibilidad WCAG 2.1 AA', () => {
   test('contraste de colores adecuado', async ({ page }) => {
     const accessibilityScanResults = await new AxeBuilder({ page })
       .withTags(['wcag2aa'])
+      .exclude('iframe') // Excluir Google Forms iframe
       .options({ rules: { 'color-contrast': { enabled: true } } })
       .analyze();
 
