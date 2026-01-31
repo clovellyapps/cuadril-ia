@@ -1,0 +1,11 @@
+# Robots.txt para CuadrilIA
+# https://cuadrilia.es
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://cuadrilia.es/sitemap.xml
+
+# LLM.txt para AI crawlers
+# https://cuadrilia.es/llm.txt

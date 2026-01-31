@@ -1,0 +1,68 @@
+# CuadrilIA
+
+> Formación y consultoría en Inteligencia Artificial para empresas.
+> El nombre viene de "cuadrilla" - un grupo de personas que aprenden juntas.
+
+## Sobre Nosotros
+
+CuadrilIA es una empresa española especializada en hacer la Inteligencia Artificial accesible para todos. Creemos que la mejor forma de aprender es en buena compañía, por eso nos llamamos CuadrilIA (como "cuadrilla", el grupo de amigos que disfrutan juntos).
+
+Ubicación: Pamplona, Navarra, España
+Cobertura: Toda España
+Idioma: Español
+
+## Servicios
+
+### 1. Talleres In-Situ
+Formación práctica presencial en las oficinas del cliente. Sesiones donde los equipos aprenden haciendo, no solo escuchando. Adaptados al nivel técnico del equipo.
+
+### 2. IA para el Día a Día
+Cursos diseñados para personas sin conocimientos técnicos. Enseñamos a usar asistentes de IA (ChatGPT, Claude, Gemini) para automatizar tareas repetitivas y ganar productividad.
+
+### 3. Spec-Kit
+Metodología y herramientas para definir proyectos de software de forma clara. Especificaciones que tanto equipos humanos como sistemas de IA pueden entender y ejecutar.
+
+### 4. AGENTS.md
+Configuración de asistentes inteligentes personalizados. Creamos agentes de IA que conocen la empresa, su código y su forma de trabajar.
+
+### 5. MCPs y Skills
+Integración de herramientas empresariales con sistemas de IA. Conexiones seguras sin código complejo.
+
+### 6. Consultoría Estratégica
+Asesoramiento para identificar dónde la IA puede generar mayor impacto en el negocio. Estrategia antes que tecnología.
+
+## Tecnologías
+
+Trabajamos con las principales plataformas de IA:
+- Anthropic (Claude)
+- OpenAI (ChatGPT, GPT-4)
+- Google (Gemini)
+- xAI (Grok)
+- Meta (Llama)
+- Microsoft (Copilot)
+- Mistral AI
+
+## Público Objetivo
+
+- Empresas que quieren formar a sus equipos en IA
+- Departamentos técnicos que buscan integrar IA en sus flujos de trabajo
+- Profesionales no técnicos que quieren aprovechar la IA en su día a día
+- Startups y empresas tecnológicas que necesitan consultoría en IA
+
+## Contacto
+
+- Web: https://cuadrilia.es
+- Email: hola@cuadrilia.es
+- Ubicación: Pamplona, Navarra, España
+
+## Valores
+
+- Formación práctica, no teórica
+- Resultados desde el primer día
+- Lenguaje accesible, sin tecnicismos innecesarios
+- Acompañamiento continuo post-formación
+- Adaptación al nivel de cada equipo
+
+## Palabras Clave
+
+inteligencia artificial, formación IA, cursos IA empresas, talleres IA presenciales, ChatGPT para empresas, Claude para empresas, Gemini formación, AGENTS.md, Spec-Kit, MCP, automatización IA, productividad IA, consultoría IA España, Pamplona, Navarra
