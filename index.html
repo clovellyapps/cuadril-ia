@@ -97,27 +97,6 @@
             contain-intrinsic-size: auto 600px;
         }
         
-        /* Skip to content link */
-        .skip-link {
-            position: absolute;
-            top: -50px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: linear-gradient(135deg, #7c3aed 0%, #2563eb 100%);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 0 0 8px 8px;
-            z-index: 9999;
-            transition: top 0.3s ease;
-            font-weight: 600;
-            text-decoration: none;
-        }
-        .skip-link:focus {
-            top: 0;
-            outline: 2px solid white;
-            outline-offset: 2px;
-        }
-        
         /* Active nav link indicator */
         nav a.nav-active {
             color: #a78bfa !important;
@@ -213,11 +192,6 @@
             <p class="mt-4 text-white font-semibold loader-text">Cuadril<span class="gradient-text">IA</span></p>
         </div>
     </div>
-    <!-- Skip to content link for keyboard/screen reader users -->
-    <a href="#main-content" class="skip-link">
-        Saltar al contenido principal
-    </a>
-    
     <!-- Navbar -->
     <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
