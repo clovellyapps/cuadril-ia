@@ -34,6 +34,7 @@ test.describe('CuadrilIA - Tests de Responsive y Adaptive', () => {
       // Click en Servicios (use first visible link)
       const serviciosLink = page.locator('a[href="#servicios"]:visible').first();
       await serviciosLink.click();
+      await page.waitForTimeout(500); // Wait for smooth scroll to complete
       await expect(page.locator('#servicios')).toBeInViewport();
       
       // On mobile, reopen menu for next navigation
@@ -45,6 +46,7 @@ test.describe('CuadrilIA - Tests de Responsive y Adaptive', () => {
       // Click en Contacto
       const contactoLink = page.locator('a[href="#contacto"]:visible').first();
       await contactoLink.click();
+      await page.waitForTimeout(500); // Wait for smooth scroll to complete
       await expect(page.locator('#contacto')).toBeInViewport();
     });
   });
