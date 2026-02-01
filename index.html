@@ -77,6 +77,13 @@
         /* Glass effect */
         .glass { background: rgba(22, 27, 34, 0.8); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
         
+        /* Lazy rendering for below-the-fold content 
+           Note: Only applied to sections NOT used as nav targets to avoid scroll issues */
+        .lazy-section {
+            content-visibility: auto;
+            contain-intrinsic-size: auto 600px;
+        }
+        
         /* Skip to content link */
         .skip-link {
             position: absolute;
@@ -532,7 +539,7 @@
     </section>
 
     <!-- Cómo Trabajamos - Timeline -->
-    <section id="proceso" class="py-24 px-4">
+    <section id="proceso" class="py-24 px-4 lazy-section">
         <div class="max-w-5xl mx-auto">
             <div class="text-center mb-16 fade-in">
                 <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Cómo trabajamos</h2>
@@ -643,7 +650,7 @@
     </section>
 
     <!-- FAQ Section -->
-    <section id="faq" class="py-24 px-4 bg-gradient-to-b from-transparent via-blue-900/5 to-transparent">
+    <section id="faq" class="py-24 px-4 bg-gradient-to-b from-transparent via-blue-900/5 to-transparent lazy-section">
         <div class="max-w-4xl mx-auto">
             <div class="text-center mb-16 fade-in">
                 <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Preguntas frecuentes</h2>
