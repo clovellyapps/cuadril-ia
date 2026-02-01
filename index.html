@@ -5,15 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CuadrilIA - Tu CuadrilIA para Dominar la Inteligencia Artificial</title>
     
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V2H82YS2VS"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-V2H82YS2VS');
-    </script>
+    <!-- Cookie Consent CSS -->
+    <link rel="stylesheet" href="/css/cookie-consent.css">
     
     <!-- SEO Básico -->
     <meta name="description" content="Formación práctica en Inteligencia Artificial para empresas. Talleres presenciales, cursos para no técnicos, AGENTS.md, Spec-Kit y más. Aprende IA en buena compañía.">
@@ -882,6 +875,7 @@
                     <a href="#faq" class="text-gray-400 hover:text-white transition-colors">FAQ</a>
                     <a href="#contacto" class="text-gray-400 hover:text-white transition-colors">Contacto</a>
                     <a href="/blog" class="text-gray-400 hover:text-white transition-colors">Blog</a>
+                    <a href="#" onclick="openCookieSettings(); return false;" class="text-gray-400 hover:text-white transition-colors">Configurar cookies</a>
                 </nav>
                 
                 <!-- Copyright -->
@@ -890,8 +884,17 @@
                 </p>
             </div>
             
-            <div class="mt-8 pt-8 border-t border-gray-800 text-center">
-                <p class="text-gray-300 text-sm">Aprende IA en buena compañía.</p>
+            <div class="mt-8 pt-8 border-t border-gray-800">
+                <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-center">
+                    <p class="text-gray-300 text-sm">Aprende IA en buena compañía.</p>
+                    <nav class="flex flex-wrap items-center justify-center gap-4 text-xs">
+                        <a href="/aviso-legal" class="text-gray-400 hover:text-white transition-colors">Aviso Legal</a>
+                        <span class="text-gray-600">|</span>
+                        <a href="/privacidad" class="text-gray-400 hover:text-white transition-colors">Política de Privacidad</a>
+                        <span class="text-gray-600">|</span>
+                        <a href="/cookies" class="text-gray-400 hover:text-white transition-colors">Política de Cookies</a>
+                    </nav>
+                </div>
             </div>
         </div>
     </footer>
@@ -1118,5 +1121,8 @@
         }
     }
     </script>
+
+    <!-- Cookie Consent Management -->
+    <script src="/js/cookie-consent.js"></script>
 </body>
 </html>
