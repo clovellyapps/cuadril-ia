@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CuadrilIA - Tu CuadrilIA para Dominar la Inteligencia Artificial</title>
     
+    <!-- Google Analytics 4 -->
+    <!-- To enable: Replace GA_MEASUREMENT_ID with your actual GA4 ID (G-XXXXXXXXXX) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID', {
+            'anonymize_ip': true,
+            'cookie_flags': 'SameSite=None;Secure'
+        });
+    </script>
+    
     <!-- SEO Básico -->
     <meta name="description" content="Formación práctica en Inteligencia Artificial para empresas. Talleres presenciales, cursos para no técnicos, AGENTS.md, Spec-Kit y más. Aprende IA en buena compañía.">
     <meta name="keywords" content="inteligencia artificial, formación IA, cursos IA empresas, talleres IA, ChatGPT, Claude, Gemini, AGENTS.md, Spec-Kit, MCP, Pamplona, Navarra, España">
@@ -1026,6 +1039,47 @@
                 icon.style.transform = isExpanded ? 'rotate(0deg)' : 'rotate(180deg)';
             });
         });
+
+        // Google Analytics event tracking
+        if (typeof gtag === 'function') {
+            // Track CTA clicks
+            document.querySelectorAll('a[href="#contacto"]').forEach((link, index) => {
+                link.addEventListener('click', () => {
+                    const location = link.closest('nav') ? 'navbar' : 
+                                   link.closest('section')?.id || 'hero';
+                    gtag('event', 'cta_click', {
+                        'event_category': 'engagement',
+                        'event_label': location
+                    });
+                });
+            });
+
+            // Track email clicks
+            document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+                link.addEventListener('click', () => {
+                    gtag('event', 'email_click', {
+                        'event_category': 'contact',
+                        'event_label': 'footer'
+                    });
+                });
+            });
+
+            // Track scroll depth
+            let scrollDepths = [25, 50, 75, 100];
+            let trackedDepths = [];
+            window.addEventListener('scroll', () => {
+                const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+                scrollDepths.forEach(depth => {
+                    if (scrollPercent >= depth && !trackedDepths.includes(depth)) {
+                        trackedDepths.push(depth);
+                        gtag('event', 'scroll_depth', {
+                            'event_category': 'engagement',
+                            'event_label': depth + '%'
+                        });
+                    }
+                });
+            });
+        }
     </script>
 
     <!-- JSON-LD Structured Data -->
