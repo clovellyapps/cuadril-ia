@@ -6,16 +6,9 @@
     <title>Página no encontrada - CuadrilIA</title>
     <meta name="robots" content="noindex, nofollow">
     
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V2H82YS2VS"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    <!-- Cookie Consent CSS -->
+    <link rel="stylesheet" href="/css/cookie-consent.css">
 
-      gtag('config', 'G-V2H82YS2VS');
-    </script>
-    
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -78,8 +71,22 @@
     </main>
 
     <!-- Footer -->
-    <footer class="py-6 px-4 border-t border-gray-800 text-center">
-        <p class="text-gray-400 text-sm">© 2026 CuadrilIA. Pamplona, Navarra.</p>
+    <footer class="py-6 px-4 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto">
+            <p class="text-gray-400 text-sm text-center mb-4">© 2026 CuadrilIA. Pamplona, Navarra.</p>
+            <nav class="flex flex-wrap items-center justify-center gap-4 text-xs text-center">
+                <a href="/aviso-legal" class="text-gray-400 hover:text-white transition-colors">Aviso Legal</a>
+                <span class="text-gray-600">|</span>
+                <a href="/privacidad" class="text-gray-400 hover:text-white transition-colors">Política de Privacidad</a>
+                <span class="text-gray-600">|</span>
+                <a href="/cookies" class="text-gray-400 hover:text-white transition-colors">Política de Cookies</a>
+                <span class="text-gray-600">|</span>
+                <a href="#" onclick="openCookieSettings(); return false;" class="text-gray-400 hover:text-white transition-colors">Configurar cookies</a>
+            </nav>
+        </div>
     </footer>
+
+    <!-- Cookie Consent Management -->
+    <script src="/js/cookie-consent.js"></script>
 </body>
 </html>
