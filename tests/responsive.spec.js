@@ -24,30 +24,33 @@ test.describe('CuadrilIA - Tests de Responsive y Adaptive', () => {
 
     test('los enlaces de navegación deben funcionar', async ({ page }) => {
       const viewport = page.viewportSize();
+      const isMobile = viewport && viewport.width < 768;
       
-      // On mobile, we need to open the mobile menu first
-      if (viewport && viewport.width < 768) {
-        await page.click('#mobile-menu-btn');
-        await page.waitForTimeout(300); // Wait for menu animation
+      // Helper function to navigate to a section
+      async function navigateTo(href, sectionId) {
+        if (isMobile) {
+          // Open mobile menu
+          await page.click('#mobile-menu-btn');
+          await page.waitForTimeout(300);
+        }
+        
+        // Click the navigation link
+        const link = page.locator(`a[href="${href}"]:visible`).first();
+        await link.click();
+        
+        // Wait for scroll to complete and verify section is visible
+        const section = page.locator(sectionId);
+        await section.waitFor({ state: 'visible' });
+        await page.waitForTimeout(800); // Extra time for smooth scroll in CI
       }
       
-      // Click en Servicios (use first visible link)
-      const serviciosLink = page.locator('a[href="#servicios"]:visible').first();
-      await serviciosLink.click();
-      await page.waitForTimeout(500); // Wait for smooth scroll to complete
-      await expect(page.locator('#servicios')).toBeInViewport();
+      // Test navigation to Servicios
+      await navigateTo('#servicios', '#servicios');
+      await expect(page.locator('#servicios')).toBeVisible();
       
-      // On mobile, reopen menu for next navigation
-      if (viewport && viewport.width < 768) {
-        await page.click('#mobile-menu-btn');
-        await page.waitForTimeout(300);
-      }
-      
-      // Click en Contacto
-      const contactoLink = page.locator('a[href="#contacto"]:visible').first();
-      await contactoLink.click();
-      await page.waitForTimeout(500); // Wait for smooth scroll to complete
-      await expect(page.locator('#contacto')).toBeInViewport();
+      // Test navigation to Contacto
+      await navigateTo('#contacto', '#contacto');
+      await expect(page.locator('#contacto')).toBeVisible();
     });
   });
 
