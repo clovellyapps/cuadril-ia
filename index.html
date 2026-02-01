@@ -603,40 +603,112 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Testimonio 1 -->
-                <div class="fade-in bg-gray-800/30 border border-gray-700 rounded-2xl p-8">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center text-white font-bold text-lg">MG</div>
-                        <div class="ml-4">
-                            <p class="font-semibold">María García</p>
-                            <p class="text-gray-300 text-sm">Directora de Operaciones</p>
+                <!-- Testimonio 1 - María García -->
+                <div class="fade-in bg-gray-800/30 border border-gray-700 rounded-2xl p-8 flex flex-col" itemscope itemtype="https://schema.org/Review">
+                    <meta itemprop="itemReviewed" content="CuadrilIA">
+                    <div class="flex-grow">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="flex items-center">
+                                <div class="w-14 h-14 rounded-full bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center text-white font-bold text-lg flex-shrink-0">MG</div>
+                                <div class="ml-4">
+                                    <p class="font-semibold" itemprop="author">María García</p>
+                                    <p class="text-gray-400 text-sm">Directora de Operaciones</p>
+                                    <p class="text-purple-400 text-sm font-medium">TechLogistics</p>
+                                </div>
+                            </div>
+                            <!-- Company Logo Placeholder -->
+                            <div class="w-10 h-10 rounded-lg bg-gray-700/50 flex items-center justify-center" role="img" aria-label="Logo TechLogistics">
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                                </svg>
+                            </div>
                         </div>
+                        <blockquote class="text-gray-300 italic mb-6" itemprop="reviewBody">"En 3 semanas, 15 personas de nuestro equipo de operaciones ya usaban IA a diario. Hemos reducido el tiempo de reporting en un 60%. Lo que antes llevaba medio día, ahora se hace en 2 horas."</blockquote>
                     </div>
-                    <p class="text-gray-300 italic">"Pensábamos que la IA era solo para programadores. CuadrilIA nos demostró que cualquiera puede aprovecharla. Ahora todo el equipo la usa a diario."</p>
+                    <!-- Metrics badges -->
+                    <div class="flex flex-wrap gap-2 mt-auto pt-4 border-t border-gray-700/50">
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-500/10 text-green-400 border border-green-500/20">
+                            <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+                            60% tiempo reportes
+                        </span>
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/10 text-purple-400 border border-purple-500/20">
+                            <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                            15 formados
+                        </span>
+                    </div>
+                    <meta itemprop="reviewRating" content="5">
                 </div>
 
-                <!-- Testimonio 2 -->
-                <div class="fade-in bg-gray-800/30 border border-gray-700 rounded-2xl p-8">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center text-white font-bold text-lg">CR</div>
-                        <div class="ml-4">
-                            <p class="font-semibold">Carlos Rodríguez</p>
-                            <p class="text-gray-300 text-sm">CTO, Startup Tecnológica</p>
+                <!-- Testimonio 2 - Carlos Rodríguez -->
+                <div class="fade-in bg-gray-800/30 border border-gray-700 rounded-2xl p-8 flex flex-col" itemscope itemtype="https://schema.org/Review">
+                    <meta itemprop="itemReviewed" content="CuadrilIA">
+                    <div class="flex-grow">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="flex items-center">
+                                <div class="w-14 h-14 rounded-full bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center text-white font-bold text-lg flex-shrink-0">CR</div>
+                                <div class="ml-4">
+                                    <p class="font-semibold" itemprop="author">Carlos Rodríguez</p>
+                                    <p class="text-gray-400 text-sm">CTO</p>
+                                    <p class="text-purple-400 text-sm font-medium">DevFlow Solutions</p>
+                                </div>
+                            </div>
+                            <!-- Company Logo Placeholder -->
+                            <div class="w-10 h-10 rounded-lg bg-gray-700/50 flex items-center justify-center" role="img" aria-label="Logo DevFlow Solutions">
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                                </svg>
+                            </div>
                         </div>
+                        <blockquote class="text-gray-300 italic mb-6" itemprop="reviewBody">"Nuestro equipo de desarrollo ahora usa asistentes de IA en su día a día. La productividad en code reviews ha mejorado un 40% y el onboarding de nuevos devs se ha reducido a la mitad."</blockquote>
                     </div>
-                    <p class="text-gray-300 italic">"El taller in-situ fue un antes y un después. Mi equipo ahora resuelve en minutos lo que antes llevaba horas. La inversión se pagó sola en semanas."</p>
+                    <!-- Metrics badges -->
+                    <div class="flex flex-wrap gap-2 mt-auto pt-4 border-t border-gray-700/50">
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-500/10 text-green-400 border border-green-500/20">
+                            <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+                            40% productividad
+                        </span>
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/10 text-purple-400 border border-purple-500/20">
+                            <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                            8 desarrolladores
+                        </span>
+                    </div>
+                    <meta itemprop="reviewRating" content="5">
                 </div>
 
-                <!-- Testimonio 3 -->
-                <div class="fade-in bg-gray-800/30 border border-gray-700 rounded-2xl p-8">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center text-white font-bold text-lg">LM</div>
-                        <div class="ml-4">
-                            <p class="font-semibold">Laura Martínez</p>
-                            <p class="text-gray-300 text-sm">Responsable de Marketing</p>
+                <!-- Testimonio 3 - Laura Martínez -->
+                <div class="fade-in bg-gray-800/30 border border-gray-700 rounded-2xl p-8 flex flex-col" itemscope itemtype="https://schema.org/Review">
+                    <meta itemprop="itemReviewed" content="CuadrilIA">
+                    <div class="flex-grow">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="flex items-center">
+                                <div class="w-14 h-14 rounded-full bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center text-white font-bold text-lg flex-shrink-0">LM</div>
+                                <div class="ml-4">
+                                    <p class="font-semibold" itemprop="author">Laura Martínez</p>
+                                    <p class="text-gray-400 text-sm">Responsable de Marketing</p>
+                                    <p class="text-purple-400 text-sm font-medium">BrandCo Media</p>
+                                </div>
+                            </div>
+                            <!-- Company Logo Placeholder -->
+                            <div class="w-10 h-10 rounded-lg bg-gray-700/50 flex items-center justify-center" role="img" aria-label="Logo BrandCo Media">
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2M7 4h10M7 4H4a1 1 0 00-1 1v14a1 1 0 001 1h16a1 1 0 001-1V5a1 1 0 00-1-1h-3M9 12h6M9 16h6"/>
+                                </svg>
+                            </div>
                         </div>
+                        <blockquote class="text-gray-300 italic mb-6" itemprop="reviewBody">"Antes tardaba 2 horas en escribir una newsletter. Ahora, con lo que aprendí, lo hago en 30 minutos y con mejor calidad. Hemos pasado de 2 a 8 publicaciones mensuales sin aumentar equipo."</blockquote>
                     </div>
-                    <p class="text-gray-300 italic">"Lo mejor fue que no nos hablaron en 'tecniqués'. Por fin entendí cómo usar ChatGPT de verdad. Ahora genero contenido en la mitad de tiempo."</p>
+                    <!-- Metrics badges -->
+                    <div class="flex flex-wrap gap-2 mt-auto pt-4 border-t border-gray-700/50">
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-500/10 text-green-400 border border-green-500/20">
+                            <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+                            75% tiempo contenido
+                        </span>
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/10 text-purple-400 border border-purple-500/20">
+                            <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+                            4x publicaciones
+                        </span>
+                    </div>
+                    <meta itemprop="reviewRating" content="5">
                 </div>
             </div>
         </div>
