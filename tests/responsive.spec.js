@@ -23,12 +23,28 @@ test.describe('CuadrilIA - Tests de Responsive y Adaptive', () => {
     });
 
     test('los enlaces de navegación deben funcionar', async ({ page }) => {
-      // Click en Servicios
-      await page.click('a[href="#servicios"]');
+      const viewport = page.viewportSize();
+      
+      // On mobile, we need to open the mobile menu first
+      if (viewport && viewport.width < 768) {
+        await page.click('#mobile-menu-btn');
+        await page.waitForTimeout(300); // Wait for menu animation
+      }
+      
+      // Click en Servicios (use first visible link)
+      const serviciosLink = page.locator('a[href="#servicios"]:visible').first();
+      await serviciosLink.click();
       await expect(page.locator('#servicios')).toBeInViewport();
       
+      // On mobile, reopen menu for next navigation
+      if (viewport && viewport.width < 768) {
+        await page.click('#mobile-menu-btn');
+        await page.waitForTimeout(300);
+      }
+      
       // Click en Contacto
-      await page.click('a[href="#contacto"]');
+      const contactoLink = page.locator('a[href="#contacto"]:visible').first();
+      await contactoLink.click();
       await expect(page.locator('#contacto')).toBeInViewport();
     });
   });
@@ -183,7 +199,7 @@ test.describe('CuadrilIA - Tests de Responsive y Adaptive', () => {
 
     test('debe tener un email de contacto', async ({ page }) => {
       await page.locator('#contacto').scrollIntoViewIfNeeded();
-      const email = page.locator('a[href="mailto:hola@cuadrilia.es"]');
+      const email = page.locator('a[href="mailto:hola@cuadril.es"]');
       await expect(email).toBeVisible();
     });
   });
