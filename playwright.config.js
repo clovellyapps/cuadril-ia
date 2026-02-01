@@ -1,7 +1,7 @@
 // @ts-check
 const { defineConfig, devices } = require('@playwright/test');
 
-// Simplified config for CI to run faster
+// Simplified config for CI to run faster (chromium only)
 const ciProjects = [
   {
     name: 'Desktop Chrome',
@@ -11,8 +11,11 @@ const ciProjects = [
     },
   },
   {
-    name: 'iPhone SE',
-    use: { ...devices['iPhone SE'] },
+    name: 'Mobile Chrome',
+    use: { 
+      ...devices['Pixel 5'],
+      browserName: 'chromium',
+    },
   },
 ];
 
