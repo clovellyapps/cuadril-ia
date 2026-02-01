@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - CuadrilIA | Recursos y Artículos sobre IA</title>
+    
+    <!-- SEO -->
+    <meta name="description" content="Blog de CuadrilIA: artículos, tutoriales y recursos sobre Inteligencia Artificial para empresas. Aprende IA de forma práctica.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://cuadril.es/blog">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: { 900: '#0d1117', 800: '#161b22', 700: '#21262d', 600: '#30363d' },
+                        accent: { 500: '#7c3aed', 400: '#a78bfa', 600: '#2563eb' }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        html { scroll-behavior: smooth; }
+        body { background-color: #0d1117; color: #f0f6fc; }
+        .gradient-text { background: linear-gradient(135deg, #7c3aed 0%, #2563eb 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .glass { background: rgba(22, 27, 34, 0.8); backdrop-filter: blur(10px); }
+    </style>
+</head>
+<body class="font-sans antialiased min-h-screen flex flex-col">
+    <!-- Navbar -->
+    <nav class="glass border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center space-x-2">
+                    <svg class="w-8 h-8" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <circle cx="25" cy="25" r="8" fill="#7c3aed"/>
+                        <circle cx="75" cy="25" r="8" fill="#7c3aed"/>
+                        <circle cx="25" cy="75" r="8" fill="#2563eb"/>
+                        <circle cx="75" cy="75" r="8" fill="#2563eb"/>
+                        <line x1="25" y1="25" x2="75" y2="25" stroke="#7c3aed" stroke-width="3"/>
+                        <line x1="25" y1="75" x2="75" y2="75" stroke="#2563eb" stroke-width="3"/>
+                        <line x1="25" y1="25" x2="25" y2="75" stroke="#5b4cdb" stroke-width="3"/>
+                        <line x1="75" y1="25" x2="75" y2="75" stroke="#5b4cdb" stroke-width="3"/>
+                    </svg>
+                    <span class="text-xl font-bold text-white">Cuadril<span class="gradient-text">IA</span></span>
+                </a>
+                <a href="/" class="text-gray-300 hover:text-white transition-colors">Volver al inicio</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex items-center justify-center px-4 py-24">
+        <div class="max-w-2xl mx-auto text-center">
+            <!-- Icon -->
+            <div class="w-24 h-24 mx-auto mb-8 rounded-full bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center">
+                <svg class="w-12 h-12 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/>
+                </svg>
+            </div>
+            
+            <!-- Heading -->
+            <h1 class="text-4xl sm:text-5xl font-bold mb-6">
+                Blog y <span class="gradient-text">Recursos</span>
+            </h1>
+            
+            <!-- Description -->
+            <p class="text-gray-400 text-lg mb-8 max-w-xl mx-auto">
+                Estamos preparando artículos, tutoriales y recursos prácticos sobre Inteligencia Artificial para tu empresa. ¡Muy pronto!
+            </p>
+            
+            <!-- Coming Soon Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-600/20 border border-purple-500/30 text-purple-300 text-sm font-medium mb-12">
+                <span class="w-2 h-2 rounded-full bg-purple-400 animate-pulse"></span>
+                Próximamente
+            </div>
+            
+            <!-- Newsletter Signup Placeholder -->
+            <div class="bg-gray-800/30 border border-gray-700 rounded-2xl p-8">
+                <h2 class="text-xl font-semibold mb-3">¿Quieres ser el primero en enterarte?</h2>
+                <p class="text-gray-400 mb-6">Déjanos tu email y te avisaremos cuando publiquemos el primer artículo.</p>
+                
+                <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onsubmit="return false;">
+                    <input 
+                        type="email" 
+                        placeholder="tu@email.com" 
+                        class="flex-grow px-4 py-3 rounded-lg bg-gray-700/50 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 transition-colors"
+                        disabled
+                    >
+                    <button 
+                        type="submit" 
+                        class="px-6 py-3 rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold opacity-50 cursor-not-allowed"
+                        disabled
+                    >
+                        Avisarme
+                    </button>
+                </form>
+                <p class="text-gray-500 text-sm mt-4">Formulario disponible próximamente</p>
+            </div>
+            
+            <!-- Back Link -->
+            <a href="/" class="inline-flex items-center gap-2 mt-12 text-purple-400 hover:text-purple-300 transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+                </svg>
+                Volver a la página principal
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 px-4 border-t border-gray-800 text-center">
+        <p class="text-gray-400 text-sm">© 2026 CuadrilIA. Pamplona, Navarra.</p>
+    </footer>
+</body>
+</html>
