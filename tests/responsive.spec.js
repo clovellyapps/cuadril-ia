@@ -69,7 +69,7 @@ test.describe('CuadrilIA - Tests de Responsive y Adaptive', () => {
     test('el título principal debe ser visible', async ({ page }) => {
       const h1 = page.locator('h1').first();
       await expect(h1).toBeVisible();
-      await expect(h1).toContainText('cuadrilla');
+      await expect(h1).toContainText('cuadrilIA');
     });
 
     test('los botones CTA deben ser visibles', async ({ page }) => {
