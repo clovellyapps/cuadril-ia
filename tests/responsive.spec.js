@@ -189,9 +189,9 @@ test.describe('CuadrilIA - Tests de Responsive y Adaptive', () => {
 
     test('los testimonios deben tener nombre y cargo', async ({ page }) => {
       await page.locator('#testimonios').scrollIntoViewIfNeeded();
-      await expect(page.locator('text=María García')).toBeVisible();
-      await expect(page.locator('text=Carlos Rodríguez')).toBeVisible();
-      await expect(page.locator('text=Laura Martínez')).toBeVisible();
+      await expect(page.locator('text=María G.')).toBeVisible();
+      await expect(page.locator('text=Carlos R.')).toBeVisible();
+      await expect(page.locator('text=Laura M.')).toBeVisible();
     });
   });
 
