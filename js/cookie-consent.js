@@ -180,7 +180,7 @@
             marketingToggle.setAttribute('aria-pressed', storedConsent.marketing);
         }
 
-        modal.querySelector('.cookie-category-toggle').forEach(toggle => {
+        modal.querySelectorAll('.cookie-category-toggle').forEach(toggle => {
             if (!toggle.disabled) {
                 toggle.addEventListener('click', function() {
                     this.classList.toggle('active');
