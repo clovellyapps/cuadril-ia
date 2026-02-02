@@ -363,7 +363,7 @@ Enviado desde: https://cuadril.es/solicitud-datos
 Fecha: ${new Date().toLocaleDateString('es-ES')}
             `.trim();
 
-            const mailtoLink = `mailto:info@cuadril.es?subject=Solicitud%20GDPR%20-%20${encodeURIComponent(typeLabels[requestType] || requestType)}&body=${encodeURIComponent(emailBody)}`;
+            const mailtoLink = `mailto:hola@cuadril.es?subject=Solicitud%20GDPR%20-%20${encodeURIComponent(typeLabels[requestType] || requestType)}&body=${encodeURIComponent(emailBody)}`;
 
             alert('Se abrirá tu cliente de correo para enviar la solicitud. Por favor, revisa el contenido antes de enviar.');
             window.location.href = mailtoLink;
